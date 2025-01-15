@@ -1,12 +1,13 @@
 import { _decorator, Component, instantiate, Label, Node, SpriteFrame, Texture2D } from 'cc';
 import { Mul } from './mul';
-const { ccclass, property } = _decorator;
+const { ccclass, property, executeInEditMode } = _decorator;
 
 function getHash () {
     return 999;
 }
 
 @ccclass('NewComponent')
+@executeInEditMode
 export class NewComponent extends Component {
     @property(Mul)
     l!: Mul;
