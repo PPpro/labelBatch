@@ -19,9 +19,6 @@ ttf2.updateIdx = function (label: Mul) {
             offset = i * stride;
             vData[offset+2] = label.idx;
         }
-        if (label.idx > 0) {
-            globalThis.a = vData;
-        }
     }
 
 }
@@ -67,7 +64,6 @@ ttf2.fillBuffers = function (comp: Label, renderer: any) {
     // slow version
     // const chunk = renderData.chunk;
     // renderer.getBufferAccessor().appendIndices(chunk);
-    globalThis.a = vData
 };
 
 

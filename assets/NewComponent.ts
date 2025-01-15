@@ -26,6 +26,8 @@ export class NewComponent extends Component {
         this.l2.setIdx(1);
         this.l2.updateRenderData();
         this.l2.customMaterial.setProperty("tex1", this.l2.spriteFrame.texture);
+
+        globalThis.a = this.l2.spriteFrame.texture;
     }
 
     update(deltaTime: number) {
