@@ -5,7 +5,7 @@ declare const ppttf: any;
 
 globalThis.ppttf ??= {};
 
-const ttf2 = ppttf;
+const ttf2 = {} as any;
 Object.assign(ttf2, ppttf);
 ttf2.updateIdx = function (label: Mul) {
     const renderData = label.renderData;
