@@ -1,7 +1,7 @@
 import { _decorator, Component, Label, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
-declare const ppttf: any;
+declare const ppttf: any;  // NOTE：引擎导出 ttf assembler
 
 globalThis.ppttf ??= {};
 
@@ -64,6 +64,11 @@ ttf2.fillBuffers = function (comp: Label, renderer: any) {
     // slow version
     // const chunk = renderData.chunk;
     // renderer.getBufferAccessor().appendIndices(chunk);
+};
+
+ttf2.updateRenderData = function (comp: Mul): void {
+    ppttf.updateRenderData(comp);
+    comp.customMaterial.setProperty("tex" + comp.idx, comp.spriteFrame.texture);
 };
 
 
